@@ -443,11 +443,11 @@
       </div>
     {%- endif -%}
 
-    <div class="header__desktop__button">
+    {% comment %} <div class="header__desktop__button">
       <a href="{{ routes.cart_url }}" class="navlink {{ navlink_cart_classes }}" title="{{ 'cart.general.title' | t }}" data-cart-toggle>
         {{ cart_status }}
       </a>
-    </div>
+    </div> {% endcomment %}
   </div>
 {%- endcapture -%}
 

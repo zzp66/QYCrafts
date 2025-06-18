@@ -1,0 +1,135 @@
+<style>
+  .num-video {
+    padding: 60px 0;
+  }
+  .num-video p {
+    margin: 0;
+  }
+  .nv-content {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .nv-box {
+    display: flex;
+    justify-content: space-between;
+  }
+  .nv-left-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .nv-item {
+    background-color: #fff;
+    padding: 35px 30px;
+    width: 240px;
+    border-radius: 16px;
+  }
+  .nv-item .p1 {
+    color: #000;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 54px;
+    margin-bottom: 10px;
+  }
+  .nv-item .p2 {
+    color: #2f2d80;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .nv-item.item-hide {
+    visibility: hidden;
+  }
+  .nv-right {
+    max-width: 850px;
+  }
+  .nv-video-box {
+    width: 850px;
+    height: 508px;
+    background-color: #fff;
+    border-radius: 16px;
+    margin-bottom: 50px;
+  }
+  .nv-text-box p {
+    font-size: 20px;
+    line-height: 36px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  @media screen and (max-width: 750px) {
+  }
+</style>
+<div class="num-video">
+  <div class="nv-content">
+    <div class="nv-box">
+      <div class="nv-left">
+        <div class="nv-left-box">
+          <div class="nv-item">
+            <p class="p1">12+</p>
+            <p class="p2">Years</p>
+          </div>
+          <div class="nv-item item-hide">
+            <p class="p1">12+</p>
+            <p class="p2">Years</p>
+          </div>
+          <div class="nv-item">
+            <p class="p1">12+</p>
+            <p class="p2">Years</p>
+          </div>
+          <div class="nv-item">
+            <p class="p1">12+</p>
+            <p class="p2">Years</p>
+          </div>
+          <div class="nv-item">
+            <p class="p1">12+</p>
+            <p class="p2">Years</p>
+          </div>
+          <div class="nv-item">
+            <p class="p1">12+</p>
+            <p class="p2">Years</p>
+          </div>
+          <div class="nv-item item-hide">
+            <p class="p1">12+</p>
+            <p class="p2">Years</p>
+          </div>
+          <div class="nv-item">
+            <p class="p1">12+</p>
+            <p class="p2">Years</p>
+          </div>
+        </div>
+      </div>
+      <div class="nv-right">
+        <div class="nv-video-box"></div>
+        <div class="nv-text-box">
+          <p class="nv-text-1">
+            QY Crafts is a leading manufacturer of premium craft materials and creative play components, specializing in
+            pom poms, chenille stems, and DIY craft essentials. We transform raw creativity into tangible products that
+            inspire makers worldwide.
+          </p>
+          <p class="nv-text-1">
+            QY Crafts is a leading manufacturer of premium craft materials and creative play components, specializing in
+            pom poms, chenille stems, and DIY craft essentials. We transform raw creativity into tangible products that
+            inspire makers worldwide.
+          </p>
+          <p class="nv-text-1">
+            QY Crafts is a leading manufacturer of premium craft materials and creative play components, specializing in
+            pom poms, chenille stems, and DIY craft essentials. We transform raw creativity into tangible products that
+            inspire makers worldwide.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Num Video",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Num Video"
+    }
+  ]
+}
+{% endschema %}

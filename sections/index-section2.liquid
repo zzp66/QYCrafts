@@ -1,0 +1,86 @@
+<style>
+  .ready-to-sell {
+    padding: 60px 0;
+  }
+  .ready-to-sell p {
+    margin: 0;
+  }
+  .rts-content {
+    max-width: 1128px;
+    margin: 0 auto;
+  }
+  p.rts-title {
+    font-size: 50px;
+    line-height: 54px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  p.rts-desc {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 500;
+    text-align: center;
+  }
+  .rts-collection-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .collection-text {
+    text-align: center;
+  }
+  p.collection-title {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+  p.collection-title sup {
+    font-size: 0.6em; /* TM的大小 */
+    vertical-align: super;
+  }
+  p.collection-desc {
+    color: #727981;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 500;
+  }
+  @media screen and (max-width: 750px) {
+  }
+</style>
+<div class="ready-to-sell">
+  <div class="rts-content">
+    <div class="rts-box">
+      <p class="rts-title">Ready-to-Sell Craft Collections</p>
+      <p class="rts-desc">
+        We specialize in OEM/ODM manufacturing across diverse craft categories, supporting the growth of dozens of
+        global brands with reliable production and in-house design.
+      </p>
+      <div class="rts-collection-box">
+        <div class="rts-collection-content">
+          <div class="collection-item">
+            <div class="collection-img">
+              <img src="" alt="">
+            </div>
+            <div class="collection-text">
+              <p class="collection-title">Tooblerz<sup>TM</sup></p>
+              <p class="collection-desc">Fuzzy Construction Play Sets</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Ready to Sell",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Ready to Sell"
+    }
+  ]
+}
+{% endschema %}

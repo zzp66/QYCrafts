@@ -44,15 +44,15 @@
   .nv-item.item-hide {
     visibility: hidden;
   }
-  .nv-left{
+  .nv-left {
     grid-column: 1;
-  width: 100%;
-  max-width: 490px;
+    width: 100%;
+    max-width: 490px;
   }
   .nv-right {
     grid-column: 3;
-  width: 100%;
-  max-width: 850px;
+    width: 100%;
+    max-width: 850px;
   }
   .nv-video-box {
     border-radius: 16px;
@@ -137,6 +137,42 @@
     z-index: 1;
   }
   @media screen and (max-width: 750px) {
+    .num-video {
+      padding: 30px 0;
+    }
+    .nv-box {
+      grid-template-columns: 1fr;
+      justify-content: center;
+    }
+    .nv-left {
+      grid-column: inherit;
+    }
+    .nv-right {
+      grid-column: inherit;
+      margin-top: 40px;
+    }
+    .nv-item {
+      padding: 20px;
+    }
+    .nv-item .p1 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+    .nv-item .p2 {
+      font-size: 14px;
+      line-height: 24px;
+    }
+    .nv-text-box p {
+      font-size: 14px;
+      line-height: 24px;
+    }
+    .nv-item.item-hide {
+      visibility: inherit;
+      display: none;
+    }
+    .nv-video-box {
+      margin-bottom: 30px;
+    }
   }
 </style>
 <div class="num-video">

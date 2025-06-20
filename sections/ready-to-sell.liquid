@@ -57,10 +57,33 @@
     width: 100%;
   }
   @media screen and (max-width: 750px) {
+    .ready-to-sell {
+      padding: 30px 0;
+    }
+    p.rts-title {
+      font-size: 24px;
+      line-height: 36px;
+      margin-bottom: 20px;
+    }
+    p.rts-desc {
+      font-size: 14px;
+      line-height: 24px;
+    }
+    .rts-collection-box{
+      margin-top: 40px;
+    }
+    .rts-collection-content{
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+    p.collection-desc{
+      font-size: 14px;
+      line-height: 24px;
+    }
   }
 </style>
 <div class="ready-to-sell">
-  <div class="rts-content">
+  <div class="rts-content wrapper">
     <div class="rts-box">
       <p class="rts-title">Ready-to-Sell Craft Collections</p>
       <p class="rts-desc">

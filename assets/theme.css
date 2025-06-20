@@ -3694,7 +3694,7 @@ body.has-header-transparent .main-content > .shopify-section:first-of-type {
 }
 @media only screen and (min-width: 1400px) {
   :root {
-    --content-max: 80vw;
+    --content-max: 1540px;
   }
 }
 

@@ -53,8 +53,45 @@
     line-height: 22px;
     font-weight: 500;
   }
+  .collection-img {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    padding: 40px;
+    background: #fff;
+    border-radius: 16px;
+  }
   .collection-img img {
+    display: block;
     width: 100%;
+    height: auto;
+    transition: filter 0.3s ease;
+  }
+  .rts-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.3); /* 半透明白色背景 */
+    backdrop-filter: blur(2px); /* 玻璃模糊效果 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .rts-overlay img {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* Hover效果 */
+  .collection-img:hover .rts-item-img {
+    filter: blur(1px); /* 图片本身也轻微模糊 */
+  }
+  .collection-img:hover .rts-overlay {
+    opacity: 1;
   }
   @media screen and (max-width: 750px) {
     .ready-to-sell {
@@ -69,14 +106,14 @@
       font-size: 14px;
       line-height: 24px;
     }
-    .rts-collection-box{
+    .rts-collection-box {
       margin-top: 40px;
     }
-    .rts-collection-content{
+    .rts-collection-content {
       grid-template-columns: 1fr;
       gap: 30px;
     }
-    p.collection-desc{
+    p.collection-desc {
       font-size: 14px;
       line-height: 24px;
     }
@@ -93,40 +130,58 @@
       <div class="rts-collection-box">
         <div class="rts-collection-content">
           <div class="rts-item">
-            <div class="collection-img">
-              <img
-                src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/Fashionable_Bracelet_Kit.png?v=1750039089"
-                alt=""
-              >
-            </div>
-            <div class="collection-text">
-              <p class="collection-title">Tooblerz<sup>TM</sup></p>
-              <p class="collection-desc">Fuzzy Construction Play Sets</p>
-            </div>
+            <a href="" class="rts-item-url">
+              <div class="collection-img">
+                <img
+                  class="rts-item-img"
+                  src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/Fashionable_Bracelet_Kit.png?v=1750039089"
+                  alt=""
+                >
+                <div class="rts-overlay">
+                  <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/arrow.png?v=1750410926" alt="">
+                </div>
+              </div>
+              <div class="collection-text">
+                <p class="collection-title">Tooblerz<sup>TM</sup></p>
+                <p class="collection-desc">Fuzzy Construction Play Sets</p>
+              </div>
+            </a>
           </div>
           <div class="rts-item">
-            <div class="collection-img">
-              <img
-                src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/Fashionable_Bracelet_Kit.png?v=1750039089"
-                alt=""
-              >
-            </div>
-            <div class="collection-text">
-              <p class="collection-title">Tooblerz<sup>TM</sup></p>
-              <p class="collection-desc">Fuzzy Construction Play Sets</p>
-            </div>
+            <a href="" class="rts-item-url">
+              <div class="collection-img">
+                <img
+                  class="rts-item-img"
+                  src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/Fashionable_Bracelet_Kit.png?v=1750039089"
+                  alt=""
+                >
+                <div class="rts-overlay">
+                  <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/arrow.png?v=1750410926" alt="">
+                </div>
+              </div>
+              <div class="collection-text">
+                <p class="collection-title">Tooblerz<sup>TM</sup></p>
+                <p class="collection-desc">Fuzzy Construction Play Sets</p>
+              </div>
+            </a>
           </div>
           <div class="rts-item">
-            <div class="collection-img">
-              <img
-                src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/Fashionable_Bracelet_Kit.png?v=1750039089"
-                alt=""
-              >
-            </div>
-            <div class="collection-text">
-              <p class="collection-title">Tooblerz<sup>TM</sup></p>
-              <p class="collection-desc">Fuzzy Construction Play Sets</p>
-            </div>
+            <a href="" class="rts-item-url">
+              <div class="collection-img">
+                <img
+                  class="rts-item-img"
+                  src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/Fashionable_Bracelet_Kit.png?v=1750039089"
+                  alt=""
+                >
+                <div class="rts-overlay">
+                  <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/arrow.png?v=1750410926" alt="">
+                </div>
+              </div>
+              <div class="collection-text">
+                <p class="collection-title">Tooblerz<sup>TM</sup></p>
+                <p class="collection-desc">Fuzzy Construction Play Sets</p>
+              </div>
+            </a>
           </div>
         </div>
       </div>

@@ -3097,7 +3097,7 @@ body.grid-compact .grid-outer {
 }
 
 body.has-line-design .grid-item {
-  border: 1px solid var(--border, var(--border));
+  /* border: 1px solid var(--border, var(--border)); */
 }
 
 body.has-line-design.grid-compact .grid-item {
@@ -5227,7 +5227,7 @@ select,
   font-weight: var(--FONT-WEIGHT-BODY);
   letter-spacing: var(--LETTER-SPACING-BODY);
   text-transform: none;
-  border: 1px solid var(--border);
+  /* border: 1px solid var(--border); */
   font-size: var(--FONT-SIZE-BASE);
   border-radius: var(--RADIUS-SELECT);
   max-width: 100%;
@@ -12571,7 +12571,7 @@ main-search .input-holder {
   border-bottom: 0;
 }
 .has-line-design .product-item__image {
-  border-bottom: 1px solid var(--border);
+  /* border-bottom: 1px solid var(--border); */
 }
 @media only screen and (max-width: 749px) {
   .has-line-design .predictive-search .product-item__image {
@@ -18522,8 +18522,8 @@ body.has-line-design.grid-compact .collection__products .grid,
   display: flex;
   flex-grow: 1;
   background: var(--bg);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  /* border-top: 1px solid var(--border); */
+  /* border-bottom: 1px solid var(--border); */
 }
 
 .has-header-sticky .collection__nav {
@@ -18808,9 +18808,9 @@ body.has-line-design.grid-compact .collection__products .grid,
   flex-direction: column;
   z-index: 1;
   background: var(--bg);
-  border-width: 0 1px 1px 0;
-  border-style: solid;
-  border-color: var(--border);
+  /* border-width: 0 1px 1px 0; */
+  /* border-style: solid; */
+  /* border-color: var(--border); */
   visibility: hidden;
   overflow: hidden;
 }
@@ -18987,7 +18987,7 @@ body.has-line-design.grid-compact .collection__products .grid,
 
 .filter-group__heading {
   position: relative;
-  border-bottom: 1px solid var(--border);
+  /* border-bottom: 1px solid var(--border); */
   padding: 0 15px 5px 0;
   margin-bottom: 0;
   font-weight: var(--FONT-WEIGHT-BODY-BOLD);
@@ -19171,7 +19171,7 @@ body.has-line-design.grid-compact .collection__products .grid,
   padding: 20px 15px;
   height: 100%;
   border-top: none;
-  border-left: 1px solid var(--border);
+  /* border-left: 1px solid var(--border); */
   border-radius: 0;
   color: var(--text);
   border-bottom: none;
@@ -19241,7 +19241,7 @@ body.has-line-design.grid-compact .collection__products .grid,
   align-items: center;
   padding-left: var(--outer);
   padding-right: var(--outer);
-  border-right: 1px solid var(--border);
+  /* border-right: 1px solid var(--border); */
   border-left: none;
 }
 .popout--group .popout__toggle::after {

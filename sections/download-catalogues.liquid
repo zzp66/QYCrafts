@@ -1,0 +1,192 @@
+<style>
+  .download-catalogues {
+    padding: 60px 0;
+  }
+  .download-catalogues p {
+    margin: 0;
+  }
+  .dc-content {
+    margin: 0 auto;
+  }
+  p.dc-title {
+    font-size: 40px;
+    line-height: 54px;
+    font-weight: 800;
+    text-align: center;
+  }
+  .dc-download-box {
+    margin-top: 50px;
+  }
+  .dc-download-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+  .dc-item-text {
+    margin-top: 20px;
+  }
+  p.dc-item-title {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 800;
+    text-align: center;
+  }
+  p.dc-item-title sup {
+    font-size: 0.6em; /* TM的大小 */
+    vertical-align: super;
+  }
+  .dc-item-img-box {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 16px;
+  }
+  .dc-item-img-box .dc-item-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: filter 0.3s ease;
+  }
+  .dc-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.3); /* 半透明白色背景 */
+    backdrop-filter: blur(2px); /* 玻璃模糊效果 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .dc-overlay img {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* Hover效果 */
+  .dc-item-img-box:hover .dc-item-img {
+    filter: blur(1px); /* 图片本身也轻微模糊 */
+  }
+  .dc-item-img-box:hover .dc-overlay {
+    opacity: 1;
+  }
+  @media screen and (max-width: 750px) {
+    .download-catalogues {
+      padding: 50px 0;
+    }
+    p.dc-title {
+      font-size: 24px;
+      line-height: 36px;
+      margin-bottom: 30px;
+    }
+    .dc-download-box {
+      margin-top: 40px;
+    }
+    .dc-download-content {
+      grid-template-columns: 1fr;
+      gap: 35px;
+    }
+    p.dc-item-title {
+      font-size: 14px;
+      line-height: 24px;
+    }
+    .dc-item-text {
+      margin-top: 10px;
+    }
+  }
+</style>
+<div class="download-catalogues">
+  <div class="dc-content wrapper">
+    <div class="dc-title-box">
+      <p class="dc-title">Download Our Catalogues</p>
+      <div class="dc-download-box">
+        <div class="dc-download-content">
+          <div class="dc-item">
+            <a href="" class="dc-item-url">
+              <div class="dc-item-img-box">
+                <img
+                  class="dc-item-img"
+                  src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/dc-1.png?v=1750426442"
+                  alt=""
+                >
+                <div class="dc-overlay">
+                  <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/arrow.png?v=1750410926" alt="">
+                </div>
+              </div>
+              <div class="dc-item-text">
+                <p class="dc-item-title">Tooblerz<sup>TM</sup></p>
+              </div>
+            </a>
+          </div>
+          <div class="dc-item">
+            <a href="" class="dc-item-url">
+              <div class="dc-item-img-box">
+                <img
+                  class="dc-item-img"
+                  src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/dc-1.png?v=1750426442"
+                  alt=""
+                >
+                <div class="dc-overlay">
+                  <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/arrow.png?v=1750410926" alt="">
+                </div>
+              </div>
+              <div class="dc-item-text">
+                <p class="dc-item-title">Tooblerz<sup>TM</sup></p>
+              </div>
+            </a>
+          </div>
+          <div class="dc-item">
+            <a href="" class="dc-item-url">
+              <div class="dc-item-img-box">
+                <img
+                  class="dc-item-img"
+                  src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/dc-1.png?v=1750426442"
+                  alt=""
+                >
+                <div class="dc-overlay">
+                  <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/arrow.png?v=1750410926" alt="">
+                </div>
+              </div>
+              <div class="dc-item-text">
+                <p class="dc-item-title">Tooblerz<sup>TM</sup></p>
+              </div>
+            </a>
+          </div>
+          <div class="dc-item">
+            <a href="" class="dc-item-url">
+              <div class="dc-item-img-box">
+                <img
+                  class="dc-item-img"
+                  src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/dc-1.png?v=1750426442"
+                  alt=""
+                >
+                <div class="dc-overlay">
+                  <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/arrow.png?v=1750410926" alt="">
+                </div>
+              </div>
+              <div class="dc-item-text">
+                <p class="dc-item-title">Tooblerz<sup>TM</sup></p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Download Catalogues",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Download Catalogues"
+    }
+  ]
+}
+{% endschema %}

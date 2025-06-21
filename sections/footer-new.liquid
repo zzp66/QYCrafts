@@ -3,15 +3,154 @@
     background-color: #fff;
     padding: 70px 0 120px;
   }
+  .site-footer-new p,
+  .site-footer-new li {
+    margin: 0;
+  }
+  .site-footer-new ul {
+    margin: 0;
+  }
+  .site-footer-new li {
+    list-style: none;
+  }
+  .site-footer-new-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .site-footer-new-box-l {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    border-right: 2px solid #f0f0f0;
+  }
+  .site-footer-new-box-r {
+    margin-left: 70px;
+  }
   .logo-with-social {
     max-width: 214px;
+  }
+  .footer-social {
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+  }
+  .footer-social img {
+    max-width: 34px;
+  }
+  .r-link-menu-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .r-link-menu-item img {
+    width: 18px;
+  }
+  .link-menu-item-box,
+  .r-link-menu-box {
+    margin-top: 20px;
+  }
+  .link-menu-title,
+  .r-link-title {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 800;
+    cursor: pointer;
+  }
+  .link-menu-item-box li,
+  .r-link-menu-item {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    margin: 10px 0;
+  }
+  p.r-link-item-text {
+    margin-left: 10px;
+  }
+  @media screen and (max-width: 750px) {
+    .site-footer-new {
+      padding: 50px 0;
+    }
+    .site-footer-new-box {
+      grid-template-columns: 1fr;
+    }
+    .site-footer-new-box-l {
+      flex-direction: column;
+      border-right: none;
+    }
+    .site-footer-new-box-r {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+    .logo-with-social {
+      max-width: none;
+      width: 100%;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #f0f0f0;
+    }
+    .footer-link-menu {
+      width: 100%;
+      margin-top: 20px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #f0f0f0;
+    }
+    .footer-social {
+      margin-top: 20px;
+    }
   }
 </style>
 <div class="site-footer-new">
   <div class="wrapper">
-    <div class="logo-with-social">
-      <div class="footer-logo">
-        <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/bot_logo.png?v=1750342217" alt="">
+    <div class="site-footer-new-box">
+      <div class="site-footer-new-box-l">
+        <div class="logo-with-social">
+          <div class="footer-logo">
+            <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/bot_logo.png?v=1750342217" alt="">
+          </div>
+          <div class="footer-social">
+            <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/com_ic_1.png?v=1750489424" alt="">
+            <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/com_ic_2.png?v=1750489424" alt="">
+            <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/com_ic_3.png?v=1750489424" alt="">
+          </div>
+        </div>
+        <div class="footer-link-menu">
+          <div class="link-menu-title">Home</div>
+          <div class="link-menu-item-box">
+            <ul>
+              <li>About Us</li>
+              <li>News</li>
+              <li>Contanct Us</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-link-menu">
+          <div class="link-menu-title">Home</div>
+          <div class="link-menu-item-box">
+            <ul>
+              <li>About Us</li>
+              <li>News</li>
+              <li>Contanct Us</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="site-footer-new-box-r">
+        <div class="r-link-title">Contact Us</div>
+        <div class="r-link-menu-box">
+          <div class="r-link-menu-item">
+            <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/bot_ic_whats.png?v=1750489424" alt="">
+            <p class="r-link-item-text">WhatsApp: <span>+86 18395858909</span></p>
+          </div>
+          <div class="r-link-menu-item">
+            <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/bot_ic_email.png?v=1750489424" alt="">
+            <p class="r-link-item-text">Email: marketing@nbparamont.com</p>
+          </div>
+          <div class="r-link-menu-item">
+            <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/bot_ic_add.png?v=1750489424" alt="">
+            <p class="r-link-item-text">Address: No.78, Nanhai Road, Xinqi, Beilun District, Ningbo, China</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>

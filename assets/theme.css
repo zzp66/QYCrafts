@@ -3759,7 +3759,7 @@ body * {
 }
 
 .wrapper--full-padded {
-  max-width: none;
+  max-width: 1540px;
   margin: 0 auto;
   padding-left: var(--outer);
   padding-right: var(--outer);

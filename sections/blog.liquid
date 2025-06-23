@@ -17,9 +17,11 @@
   }
 {%- endstyle -%}
 
+{{ 'blog-new.css' | asset_url | stylesheet_tag }}
+
 <section
   id="Blog--{{ section.id }}"
-  class="blog-section section-padding {{ color_scheme }}"
+  class="blog123 blog-section section-padding {{ color_scheme }}"
   data-section-id="{{ section.id }}"
   data-section-type="blog"
 >
@@ -124,12 +126,12 @@
       "label": "Title size",
       "default": "heading-small",
       "options": [
-        {"value": "heading-mini", "label": "Mini"},
-        {"value": "heading-x-small", "label": "Extra small"},
-        {"value": "heading-small", "label": "Small"},
-        {"value": "heading-medium", "label": "Medium"},
-        {"value": "heading-large", "label": "Large"},
-        {"value": "heading-x-large", "label": "Extra large"}
+        { "value": "heading-mini", "label": "Mini" },
+        { "value": "heading-x-small", "label": "Extra small" },
+        { "value": "heading-small", "label": "Small" },
+        { "value": "heading-medium", "label": "Medium" },
+        { "value": "heading-large", "label": "Large" },
+        { "value": "heading-x-large", "label": "Extra large" }
       ]
     },
     {
@@ -228,13 +230,13 @@
       "label": "Title SEO tag",
       "default": "automatic",
       "options": [
-        {"value": "automatic", "label": "Automatic"},
-        {"value": "h1", "label": "H1"},
-        {"value": "h2", "label": "H2"},
-        {"value": "h3", "label": "H3"},
-        {"value": "h4", "label": "H4"},
-        {"value": "h5", "label": "H5"},
-        {"value": "h6", "label": "H6"}
+        { "value": "automatic", "label": "Automatic" },
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "h4", "label": "H4" },
+        { "value": "h5", "label": "H5" },
+        { "value": "h6", "label": "H6" }
       ]
     }
   ]

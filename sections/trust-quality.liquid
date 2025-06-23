@@ -27,14 +27,10 @@
   }
   .tq-img-box {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     justify-content: center;
+    justify-items: center;
     gap: 20px;
-  }
-  .tq-img-box::after {
-    content: '';
-    grid-column: 1 / -1; /* 占据整行 */
-    height: 0;
   }
   .tq-item img {
     max-height: 72px;
@@ -42,12 +38,16 @@
   }
 
   .tq-item {
+    width: 100%;
     display: flex;
     justify-content: center;
     padding: 24px 0;
     background-color: #fff;
     border-radius: 16px;
     cursor: pointer;
+  }
+  .tq-item.tq-item-hide {
+    visibility: hidden;
   }
   .tq-item:hover {
     box-shadow: 0 12px 20px 6px rgba(96, 109, 128, 0.04), 0 8px 16px 4px rgba(96, 109, 128, 0.04),
@@ -71,6 +71,10 @@
     .tq-img-box {
       grid-template-columns: repeat(2, 1fr);
       gap: 10px;
+    }
+    .tq-item.tq-item-hide {
+      visibility: inherit;
+      display: none;
     }
   }
 </style>
@@ -127,6 +131,7 @@
       <div class="tq-item">
         <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/15.png?v=1750351095" alt="">
       </div>
+      <div class="tq-item tq-item-hide"></div>
       <div class="tq-item">
         <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/16.png?v=1750351095" alt="">
       </div>
@@ -136,6 +141,7 @@
       <div class="tq-item">
         <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/18.png?v=1750351095" alt="">
       </div>
+      <div class="tq-item tq-item-hide"></div>
     </div>
   </div>
 </div>

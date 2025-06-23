@@ -5665,6 +5665,10 @@ form .errors li:last-child,
   height: 100%;
   object-fit: cover;
   image-rendering: auto;
+  /* max-height: 400px; */
+}
+
+.hero__images .image__fill img {
   max-height: 400px;
 }
 
@@ -5683,6 +5687,23 @@ form .errors li:last-child,
   width: 100%;
   height: 100%;
   image-rendering: auto;
+}
+
+section[data-section-type="rich-text"] img {
+    border-radius: 16px;
+  max-height: 400px;
+  object-fit: cover;
+}
+div[data-section-type="highlights"] img{
+  border-radius: 16px;
+}
+div[data-section-type="highlights"] .highlights__item__background{
+  border-radius: 16px;
+  overflow: hidden;
+}
+section[data-section-type="rich-text"] figure.image-wrapper{
+  padding-top: 400px;
+  overflow: hidden;
 }
 .image-wrapper .svg-placeholder {
   position: absolute;
@@ -9249,7 +9270,6 @@ ticker-bar[paused] .ticker--animated {
 
 /*=============== Overlays ===============*/
 .image-overlay {
-  border-radius: 16px;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -9258,10 +9278,10 @@ ticker-bar[paused] .ticker--animated {
   z-index: 10;
   background-color: var(--overlay-bg);
   opacity: var(--overlay-opacity);
-  -webkit-border-radius: 16px;
-  -moz-border-radius: 16px;
-  -ms-border-radius: 16px;
-  -o-border-radius: 16px;
+}
+
+.hero__images .image-overlay {
+  border-radius: 16px;
 }
 
 /*=============== Alignment ===============*/

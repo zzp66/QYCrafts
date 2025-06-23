@@ -1,0 +1,99 @@
+<style>
+  .contact-map {
+    padding: 50px 0 120px;
+  }
+  .contact-map p {
+    margin: 0;
+  }
+  .cm-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 360px) 30px minmax(0, 1050px);
+    align-items: center;
+  }
+
+  p.cm-title {
+    font-size: 40px;
+    line-height: 56px;
+    margin-bottom: 20px;
+    font-weight: 800;
+  }
+  p.cm-desc {
+    font-size: 20px;
+    line-height: 34px;
+    margin-bottom: 20px;
+    font-weight: 800;
+  }
+  p.cm-time {
+    color: #2f2d80;
+    font-size: 20px;
+    line-height: 34px;
+    margin-bottom: 50px;
+    font-weight: 500;
+  }
+  .cm-btn {
+    display: flex;
+    justify-content: center;
+  }
+  .cm-btn .cm-btn-a {
+    color: #fff;
+    background-color: #2f2d80;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 16px 40px;
+    border-radius: 16px;
+    font-weight: 800;
+  }
+  .cm-l {
+    text-align: center;
+    grid-column: 1;
+  }
+  .cm-r {
+    grid-column: 3;
+    width: 100%;
+    display: flex;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  @media screen and (max-width: 750px) {
+    .cm-content {
+      grid-template-columns: 1fr;
+    }
+    .cm-l {
+      grid-column: auto;
+    }
+    .cm-r {
+      grid-column: auto;
+      margin-top: 30px;
+    }
+  }
+</style>
+<div class="contact-map">
+  <div class="wrapper">
+    <div class="cm-content">
+      <div class="cm-l">
+        <p class="cm-title">Our Location</p>
+        <p class="cm-desc">No.78, Nanhai Road, Xinqi, Beilun District, Ningbo, China</p>
+        <p class="cm-time">Mon - Sat, 8 am - 5pm</p>
+        <div class="cm-btn">
+          <a class="cm-btn-a" href="/">DIRECTIONS</a>
+        </div>
+      </div>
+      <div class="cm-r">
+        <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/cm-map.jpg?v=1750624231" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Contact Map",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Contact Map"
+    }
+  ]
+}
+{% endschema %}

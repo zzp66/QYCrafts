@@ -6807,6 +6807,9 @@ hover-disclosure {
 .header__desktop__buttons .socials {
   margin-right: 3px;
 }
+.header__desktop__buttons .socials a{
+  display: flex;
+}
 
 .navlink--toplevel,
 .header__desktop__button .navlink {
@@ -9988,8 +9991,24 @@ p a:hover::after {
   position: relative;
   display: block;
   overflow-wrap: break-word;
-  margin: 0 0 var(--gutter);
+  margin: 0 0 80px;
   padding: 0 var(--outer);
+}
+
+div[data-section-type="columns"] .grid{
+  row-gap: 75px;
+}
+
+section[data-section-type="timeline"] .timeline__image-inner img{
+  border-radius: 16px;
+}
+
+section[data-section-type="timeline"] .hero__title{
+  margin-bottom: 30px;
+}
+
+section[data-section-type="timeline"] .timeline__head{
+  margin-bottom: 80px;
 }
 
 .wrapper .grid__heading-holder,

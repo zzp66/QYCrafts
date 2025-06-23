@@ -2,7 +2,12 @@
     grid-template-columns: 1fr;
 }
 
+body.has-line-design .blog-listing .article__image {
+    border: none;
+}
+
 .blog-article-item {
+    max-height: 280px;
     display: grid;
     grid-template-columns: minmax(0, 280px) 40px minmax(0, 1fr);
     background-color: #fff;
@@ -22,7 +27,13 @@
     grid-column: 3;
     display: flex;
     align-items: center;
-    padding: 30px 24px 30px 0;
+    padding: 30px 24px 24px 0;
+    overflow: hidden;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
 }
 
 .blog-article-item .article__image,
@@ -30,9 +41,22 @@
     height: 100%;
 }
 
+.article__text-l {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.article__text-r {
+    margin-left: 30px;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
 .blog-article-item img {
     object-fit: cover;
-    height: 280px;
     overflow: hidden;
     border-radius: 16px;
     -webkit-border-radius: 16px;
@@ -45,14 +69,20 @@
     font-size: 24px;
     line-height: 40px;
     font-weight: 800;
+    margin-bottom: 10px;
 }
 
 .article__excerpt {
     color: #727981;
-    margin-top: 10px;
     font-size: 20px;
     line-height: 32px;
     font-weight: 500;
+    margin-top: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .article__meta {
@@ -61,4 +91,37 @@
     line-height: 30px;
     font-weight: 500;
     margin: 50px 0 0;
+}
+
+@media screen and (max-width: 750px) {
+    .blog-article-item {
+        grid-template-columns: 1fr;
+    }
+
+    .article__image__outer {
+        grid-column: inherit;
+    }
+
+    .article__text-wrapper {
+        grid-column: inherit;
+    }
+
+    .blog-article-item {
+        max-height: none;
+    }
+
+    .blog-article-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .article__title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .article__excerpt {
+        font-size: 16px;
+        line-height: 24px;
+    }
 }

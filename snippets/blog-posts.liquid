@@ -179,14 +179,15 @@
             data-aos-duration="{{ animation_duration }}"
           >
             <div class="article__text-l">
-              <{{ title_tag }} class="article__title {{ section.settings.title_font_size }}">
-                <a href="{{ article.url }}" title="{{ article.title | strip_html | escape }}">
-                  {{ article.title }}
-                </a>
-              </{{ title_tag }}>
+              <div class="article_text-l-text">
+                <{{ title_tag }} class="article__title {{ section.settings.title_font_size }}">
+                  <a href="{{ article.url }}" title="{{ article.title | strip_html | escape }}">
+                    {{ article.title }}
+                  </a>
+                </{{ title_tag }}>
 
-              <p class="article__excerpt">{{ article.excerpt_or_content | strip_html | truncatewords: 30 }}</p>
-
+                <p class="article__excerpt">{{ article.excerpt_or_content | strip_html | truncatewords: 30 }}</p>
+              </div>
               {%- if show_date or show_author or show_comments -%}
                 <p class="article__meta">
                   {%- if show_date -%}

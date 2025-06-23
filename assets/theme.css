@@ -11666,7 +11666,7 @@ main-search .input-holder {
 .product__block--lines {
   padding-top: calc(var(--form-margin) / 2);
   padding-bottom: calc(var(--form-margin) / 2);
-  border-top: 1px solid var(--border);
+  /* border-top: 1px solid var(--border); */
   border-bottom: 1px solid var(--border);
 }
 .product__block--lines + .product__block--lines {
@@ -21764,6 +21764,14 @@ map-component {
 related-products,
 recently-viewed {
   display: block;
+}
+related-products .grid__heading-holder{
+  margin-bottom: 50px;
+}
+related-products .related_title,related-products .recent_title{
+  font-size: 40px;
+  line-height: 46px;
+  font-weight: 800;
 }
 
 .related__wrapper {

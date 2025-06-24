@@ -29,11 +29,11 @@
   .logo-with-social {
     max-width: 214px;
   }
-  .footer-logo{
+  .footer-logo {
     max-width: 214px;
     display: flex;
   }
-  .footer-logo img{
+  .footer-logo img {
     max-width: 100%;
     height: auto;
   }
@@ -70,7 +70,7 @@
     font-weight: 800;
     cursor: pointer;
   }
-  .link-menu-item-box li,
+  .link-menu-item-box li a,
   .r-link-menu-item {
     cursor: pointer;
     font-size: 16px;
@@ -79,9 +79,12 @@
     margin: 10px 0;
     border-bottom: 1px solid transparent;
   }
-  .link-menu-item-box li:hover,
-  .r-link-menu-item:hover {
+  .link-menu-item-box li a {
+    display: flex;
+  }
+  .link-menu-item-box li a:hover {
     color: #4fc8f4;
+    text-decoration: underline;
     /* border-bottom: 1px solid #4fc8f4; */
   }
   p.r-link-item-text {
@@ -125,29 +128,33 @@
       <div class="site-footer-new-box-l">
         <div class="logo-with-social">
           <div class="footer-logo">
-            <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/bot_logo_2x_eb6878e0-941c-48f0-815d-a29b02d30667.png?v=1750776208" alt="">
+            <a href="/"><img src="{{ section.settings.footer_logo | image_url: width: master }}" alt=""></a>
           </div>
           <div class="footer-social">
             {%- render 'social-icons' -%}
           </div>
         </div>
         <div class="footer-link-menu">
-          <div class="link-menu-title">Home</div>
+          <div class="link-menu-title">{{ section.settings.footer_menu1.title }}</div>
           <div class="link-menu-item-box">
             <ul>
-              <li>About Us</li>
-              <li>News</li>
-              <li>Contanct Us</li>
+              {% for item in section.settings.footer_menu1.links %}
+                <li>
+                  <a href="{{ item.url }}">{{ item.title }}</a>
+                </li>
+              {% endfor %}
             </ul>
           </div>
         </div>
         <div class="footer-link-menu">
-          <div class="link-menu-title">Products</div>
+          <div class="link-menu-title">{{ section.settings.footer_menu2.title }}</div>
           <div class="link-menu-item-box">
             <ul>
-              <li>Tooblerz ™</li>
-              <li>Cozy Craftworks ™</li>
-              <li>CraftSpot ™</li>
+              {% for item in section.settings.footer_menu2.links %}
+                <li>
+                  <a href="{{ item.url }}">{{ item.title }}</a>
+                </li>
+              {% endfor %}
             </ul>
           </div>
         </div>
@@ -172,10 +179,45 @@
     </div>
   </div>
 </div>
+
+<script>
+  document.querySelectorAll('.click-to-form').forEach((button) => {
+    button.addEventListener('click', (e) => {
+      // 阻止默认行为
+      e.preventDefault();
+
+      // 获取目标表单元素
+      const form = document.querySelector('.fcf-form');
+
+      // 平滑滚动到表单
+      form.scrollIntoView({
+        behavior: 'smooth',
+        block: 'end',
+      });
+    });
+  });
+</script>
+
 {% schema %}
 {
   "name": "New Footer",
-  "settings": [],
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "footer_logo",
+      "label": "logo选择"
+    },
+    {
+      "type": "link_list",
+      "id": "footer_menu1",
+      "label": "Footer Menu1"
+    },
+    {
+      "type": "link_list",
+      "id": "footer_menu2",
+      "label": "Footer Menu2"
+    }
+  ],
   "presets": [
     {
       "name": "New Footer"

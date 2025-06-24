@@ -68,6 +68,24 @@
     color: #ef5b80;
     font-weight: 800;
   }
+  .num-video .nv-text-box a {
+    font-size: 20px;
+    line-height: 36px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #ef5b80;
+    font-weight: 800;
+    --main-color: #ef5b80;
+    --hover-color: #ef5b80;
+    text-decoration: none;
+  }
+  .num-video .nv-text-box a::after {
+    display: none;
+  }
+  .num-video .nv-text-box a:hover {
+    text-decoration: underline;
+    text-decoration-color: #ef5b80;
+  }
   .nv-text-box strong {
     font-weight: 800;
   }
@@ -162,9 +180,14 @@
       font-size: 14px;
       line-height: 24px;
     }
-    .nv-text-box p {
+    .nv-text-box p,
+    .num-video .nv-text-box a {
       font-size: 14px;
       line-height: 24px;
+    }
+    .num-video .nv-text-box a {
+      text-decoration: underline;
+      text-decoration-color: #ef5b80;
     }
     .nv-item.item-hide {
       visibility: inherit;
@@ -253,10 +276,12 @@
             tangible products that inspire makers worldwide.
           </p>
           <p class="nv-text">
-            As the manufacturing arm of <span><strong>PARAMONT</strong> Group</span>, we combine global design
-            intelligence with industrial excellence. Our Ningbo and U.S. design teams deliver trend-forward concepts,
-            while QY Crafts—with 100+ production lines—ensures precision at scale, maintaining a 0.1% defect rate for
-            unmatched quality.
+            As the manufacturing arm of
+            <a href="https://www.paramontgroup.com/"
+              ><span><strong>PARAMONT</strong> Group</span></a
+            >, we combine global design intelligence with industrial excellence. Our Ningbo and U.S. design teams
+            deliver trend-forward concepts, while QY Crafts—with 100+ production lines—ensures precision at scale,
+            maintaining a 0.1% defect rate for unmatched quality.
           </p>
           <p class="nv-text">
             We are the <span>Builders of Play</span>: From custom components to complete product lines, we empower

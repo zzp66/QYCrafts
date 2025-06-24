@@ -17,6 +17,33 @@ body.has-line-design .blog-listing .article__image {
     -moz-border-radius: 16px;
     -ms-border-radius: 16px;
     -o-border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.blog-article-item:hover {
+    box-shadow: 0 12px 20px 6px rgba(96, 109, 128, 0.04), 0 8px 16px 4px rgba(96, 109, 128, 0.04),
+        0 4px 14px 0 rgba(98, 111, 131, 0.04);
+}
+
+.blog-article-item:hover .article__text-r svg {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+}
+
+.blog-article-item:hover .article__text-r svg rect {
+    fill: #4FC8F4;
+}
+
+.blog-article-item:hover .article__text-r svg path {
+    fill: #fff;
+}
+
+.blog-article-item:hover .article__text-r svg path {
+    stroke: #fff;
 }
 
 .article__image__outer {

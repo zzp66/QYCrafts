@@ -61,7 +61,7 @@
 <script src="{{ 'related-products.js' | asset_url }}" defer="defer"></script>
 
 <related-products
-  class="related__wrapper {{ color_scheme }} js"
+  class="wrapper related__wrapper {{ color_scheme }} js"
   id="RelatedProducts--{{ section.id }}"
   data-section-id="{{ section.id }}"
   data-section-type="related"
@@ -178,8 +178,8 @@
       "label": "Alignment",
       "default": "text-center",
       "options": [
-        {"value": "text-left", "label": "Left"},
-        {"value": "text-center", "label": "Centered"}
+        { "value": "text-left", "label": "Left" },
+        { "value": "text-center", "label": "Centered" }
       ]
     },
     {
@@ -188,12 +188,12 @@
       "label": "Heading size",
       "default": "heading-small",
       "options": [
-        {"value": "heading-mini", "label": "Mini"},
-        {"value": "heading-x-small", "label": "Extra small"},
-        {"value": "heading-small", "label": "Small"},
-        {"value": "heading-medium", "label": "Medium"},
-        {"value": "heading-large", "label": "Large"},
-        {"value": "heading-x-large", "label": "Extra large"}
+        { "value": "heading-mini", "label": "Mini" },
+        { "value": "heading-x-small", "label": "Extra small" },
+        { "value": "heading-small", "label": "Small" },
+        { "value": "heading-medium", "label": "Medium" },
+        { "value": "heading-large", "label": "Large" },
+        { "value": "heading-x-large", "label": "Extra large" }
       ],
       "info": "Applies only when tabs are disabled"
     },

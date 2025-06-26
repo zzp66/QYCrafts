@@ -3,6 +3,7 @@
 }
 
 .product__images {
+    max-height: 840px;
     grid-column: 1;
     background-color: #CFF0FD;
     padding: 130px 56px 50px;
@@ -18,8 +19,6 @@
     grid-column: 3;
     padding: 0;
 }
-
-.product__images--thumbs .product__slides {}
 
 .product__images--thumbs .product__slide {
     width: 100%;
@@ -47,7 +46,7 @@
 
 .radio__legend__option-name {
     color: #727981;
-    font-size: 18px;
+    font-size: var(--font-body-medium);
     line-height: 28px;
     font-weight: 500;
 }
@@ -58,7 +57,7 @@
 
 .radio__legend__values {
     margin-top: 10px;
-    font-size: 20px;
+    font-size: var(--font-body-medium);
     line-height: 30px;
     font-weight: 500;
 }
@@ -88,6 +87,10 @@
 .inquiry-box .inquiry-btn:hover {
     color: #2F2D80;
     background-color: #fff;
+}
+
+.product-selectors-sku {
+    border-bottom: 1px solid var(--border);
 }
 
 @media screen and (max-width:750px) {

@@ -177,6 +177,10 @@
     {%- unless product.has_only_default_variant -%}
       {%- assign selects_counter = 0 -%}
       <div class="product__selectors" data-product-variants>
+        <div class="product-selectors-sku radio__fieldset">
+        <div class="radio__legend__option-name">SKU/Model Number</div>
+        <div class="radio__legend__values">{{ product.selected_or_first_available_variant.sku }}</div>
+      </div>
         {%- for option in product.options_with_values -%}
           {%- liquid
             assign option_name_handle_separator = option.name | handle | prepend: ',' | append: ','

@@ -15,7 +15,7 @@
   }
   .site-footer-new-box {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 65% 35%;
   }
   .site-footer-new-box-l {
     display: flex;
@@ -90,6 +90,16 @@
   p.r-link-item-text {
     margin-left: 10px;
   }
+  .site-footer-Copyright {
+    margin-top: 50px;
+  }
+  .site-footer-Copyright p {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #727981;
+    text-align: center;
+  }
   @media screen and (max-width: 750px) {
     .site-footer-new {
       padding: 50px 0;
@@ -118,6 +128,9 @@
       border-bottom: 2px solid #f0f0f0;
     }
     .footer-social {
+      margin-top: 20px;
+    }
+    .site-footer-Copyright {
       margin-top: 20px;
     }
   }
@@ -158,6 +171,18 @@
             </ul>
           </div>
         </div>
+        <div class="footer-link-menu">
+          <div class="link-menu-title">{{ section.settings.footer_menu3.title }}</div>
+          <div class="link-menu-item-box">
+            <ul>
+              {% for item in section.settings.footer_menu3.links %}
+                <li>
+                  <a href="{{ item.url }}">{{ item.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
       </div>
       <div class="site-footer-new-box-r">
         <div class="r-link-title">Contact Us</div>
@@ -176,6 +201,9 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="site-footer-Copyright">
+      <p>{{ section.settings.footer_copyright }}</p>
     </div>
   </div>
 </div>
@@ -216,6 +244,16 @@
       "type": "link_list",
       "id": "footer_menu2",
       "label": "Footer Menu2"
+    },
+    {
+      "type": "link_list",
+      "id": "footer_menu3",
+      "label": "Footer Menu3"
+    },
+    {
+      "type": "text",
+      "id": "footer_copyright",
+      "label": "Copyright"
     }
   ],
   "presets": [

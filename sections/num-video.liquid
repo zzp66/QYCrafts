@@ -72,7 +72,6 @@
     font-size: 20px;
     line-height: 36px;
     font-weight: 500;
-    margin-bottom: 20px;
     color: #ef5b80;
     font-weight: 800;
     --main-color: #ef5b80;
@@ -107,51 +106,12 @@
     overflow: hidden;
     border-radius: 16px;
   }
-  /* 封面图样式 */
-  .video-cover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    z-index: 2;
-    transition: opacity 0.3s;
-  }
-  /* 自定义播放按钮样式 */
-  .play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 30px;
-    z-index: 3;
-  }
-
-  .play-button::after {
-    content: url('https://cdn.shopify.com/s/files/1/0710/6176/6321/files/class_ic_activate_95bb7f28-a202-443a-94dd-304aaef582d9.png?v=1750489424');
-  }
-
-  /* 当视频播放时隐藏封面和播放按钮 */
-  video.playing ~ .video-cover,
-  video.playing ~ .play-button {
-    opacity: 0;
-    pointer-events: none;
-  }
   /* 视频元素样式 */
   video {
     position: relative;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     z-index: 1;
   }
   @media screen and (max-width: 750px) {
@@ -246,6 +206,7 @@
             <video
               id="myVideo"
               preload="auto"
+              autoplay
               muted
               playsinline
               webkit-playsinline
@@ -253,20 +214,11 @@
               x5-video-player-type="h5"
               x5-video-player-fullscreen="true"
               x5-video-orientation="portraint"
+              poster="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/nv-video-img.png"
             >
               <source src="https://cdn.shopify.com/videos/c/o/v/c2e4e9c784394aad995ceec3acbc9d05.mp4" type="video/mp4">
               您的浏览器不支持HTML5视频
             </video>
-
-            <!-- 自定义封面图 -->
-            <div
-              class="video-cover"
-              id="videoCover"
-              style="background-image: url('https://cdn.shopify.com/s/files/1/0710/6176/6321/files/nv-video-img.png?v=1750252409');"
-            ></div>
-
-            <!-- 自定义播放按钮 -->
-            <div class="play-button" id="playButton"></div>
           </div>
         </div>
         <div class="nv-text-box">
@@ -294,45 +246,6 @@
     </div>
   </div>
 </div>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const video = document.getElementById('myVideo');
-    const playButton = document.getElementById('playButton');
-    const videoCover = document.getElementById('videoCover');
-
-    // 点击视频容器时切换播放/暂停
-    document.querySelector('.video-container').addEventListener('click', function () {
-      if (video.paused) {
-        video.play();
-        video.muted = false; // 播放时不静音
-        video.classList.add('playing');
-      } else {
-        video.pause();
-        video.classList.remove('playing');
-      }
-    });
-
-    // 视频结束时显示封面和播放按钮
-    video.addEventListener('ended', function () {
-      video.classList.remove('playing');
-    });
-
-    // 防止视频预加载时自动播放
-    video.autoplay = false;
-
-    // 视频开始播放后完全隐藏封面（而不只是透明）
-    video.addEventListener('play', function () {
-      videoCover.style.display = 'none';
-    });
-
-    video.addEventListener('pause', function () {
-      if (!video.classList.contains('playing')) {
-        videoCover.style.display = 'block';
-      }
-    });
-  });
-</script>
 
 {% schema %}
 {

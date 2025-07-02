@@ -12,7 +12,8 @@
   .tq-content {
     margin: 0 auto;
   }
-  p.tq-title {
+  p.tq-title,
+  p.retail-partners-title {
     font-size: 44px;
     line-height: 60px;
     font-weight: 800;
@@ -53,12 +54,36 @@
     box-shadow: 0 12px 20px 6px rgba(96, 109, 128, 0.04), 0 8px 16px 4px rgba(96, 109, 128, 0.04),
       0 4px 14px 0 rgba(98, 111, 131, 0.04);
   }
+  .retail-partners-box {
+    margin-top: 150px;
+  }
+  .rp-box {
+    margin-top: 50px;
+    padding: 50px;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    border-radius: 16px;
+    overflow: hidden;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+  }
+  .rp-img-item {
+    display: flex;
+  }
+  .rp-box img {
+    max-height: 120px;
+    width: auto;
+  }
 
   @media screen and (max-width: 750px) {
     .trust-quality {
       padding: 30px 0;
     }
-    p.tq-title {
+    p.tq-title,
+    p.retail-partners-title {
       font-size: 24px;
       line-height: 36px;
       margin-bottom: 20px;
@@ -75,6 +100,13 @@
     .tq-item.tq-item-hide {
       visibility: inherit;
       display: none;
+    }
+    .retail-partners-box {
+      margin-top: 50px;
+    }
+    .rp-box {
+      margin-top: 20px;
+      padding: 10px;
     }
   }
 </style>
@@ -142,6 +174,48 @@
         <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/18.png?v=1750351095" alt="">
       </div>
       <div class="tq-item tq-item-hide"></div>
+    </div>
+
+    <div class="retail-partners-box">
+      <p class="retail-partners-title">Some of Our Top Retail Partners</p>
+      <div class="rp-box">
+        <div class="rp-img-item">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/logo_1_76cd45f4-7671-4c09-b515-8b36ed436eca.png"
+            alt=""
+          >
+        </div>
+        <div class="rp-img-item">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/logo_2_9500dc0b-9181-4344-9644-180c52d83038.png"
+            alt=""
+          >
+        </div>
+        <div class="rp-img-item">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/logo_3_8fa1172d-849a-4b51-a712-e4bb31a28554.png"
+            alt=""
+          >
+        </div>
+        <div class="rp-img-item">
+          <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/logo_4.png" alt="">
+        </div>
+        <div class="rp-img-item">
+          <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/logo_5.png" alt="">
+        </div>
+        <div class="rp-img-item">
+          <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/logo_6.png" alt="">
+        </div>
+        <div class="rp-img-item">
+          <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/logo_7.png" alt="">
+        </div>
+        <div class="rp-img-item">
+          <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/logo_8.png" alt="">
+        </div>
+        <div class="rp-img-item">
+          <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/logo_9.png" alt="">
+        </div>
+      </div>
     </div>
   </div>
 </div>

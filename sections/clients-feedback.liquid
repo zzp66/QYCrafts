@@ -21,44 +21,30 @@
   .cf-item {
     width: 100%;
     margin: 20px 0;
-    padding: 40px 10px;
+    padding: 65px 60px 65px 100px;
     background-color: #fff;
     border-radius: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    gap: 15px;
   }
   .cf-item:hover {
     box-shadow: 0 12px 20px 6px rgba(96, 109, 128, 0.04), 0 8px 16px 4px rgba(96, 109, 128, 0.04),
       0 4px 14px 0 rgba(98, 111, 131, 0.04);
   }
-  .cf-img {
-    max-width: 280px;
-    padding: 50px 40px;
-  }
-  .cf-text {
-    margin: 0 10px;
-    max-width: 800px;
-  }
   p.cf-text-desc {
+    max-width: 800px;
     font-size: 20px;
     line-height: 32px;
     font-weight: 500;
-    margin-bottom: 15px;
-  }
-  p.cf-text-author {
-    font-size: 20px;
-    line-height: 32px;
-    font-weight: 500;
-    color: #727981;
   }
   .cf-rings {
-    padding: 25px 60px;
-    border-left: 2px solid #eaf2f4;
+    display: flex;
   }
   .cf-rings img {
-    max-height: 30px;
+    max-height: 28px;
     width: auto;
   }
   @media screen and (max-width: 750px) {
@@ -73,25 +59,13 @@
     .cf-item {
       flex-direction: column;
       justify-content: center;
-      padding: 10px 0;
-    }
-    .cf-img {
-      padding: 0;
+      padding: 20px 10px;
     }
     p.cf-text-desc {
       font-size: 14px;
       line-height: 24px;
       text-align: center;
       margin-bottom: 10px;
-    }
-    p.cf-text-author {
-      font-size: 14px;
-      line-height: 24px;
-      text-align: center;
-    }
-    .cf-rings {
-      padding: 20px 0;
-      border-left: none;
     }
   }
 </style>
@@ -100,47 +74,29 @@
     <p class="cf-title">Feedback from Our Clients</p>
     <div class="cf-item-box">
       <div class="cf-item">
-        <div class="cf-img">
-          <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/logo_1.png?v=1750352297" alt="">
-        </div>
-        <div class="cf-text">
-          <p class="cf-text-desc">
-            "QY Crafts is more than a supplier. Their team brings actionable data insights, clear proposals, and timely
-            execution to every project. We can always count on them to deliver with precision and professionalism."
-          </p>
-          <p class="cf-text-author">Senior Buyer, Costco</p>
-        </div>
+        <p class="cf-text-desc">
+          "QY Crafts is more than a supplier. Their team brings actionable data insights, clear proposals, and timely
+          execution to every project. We can always count on them to deliver with precision and professionalism."
+        </p>
         <div class="cf-rings">
           <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/Star.png?v=1750352297" alt="">
         </div>
       </div>
       <div class="cf-item">
-        <div class="cf-img">
-          <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/logo_2.png?v=1750352297" alt="">
-        </div>
-        <div class="cf-text">
-          <p class="cf-text-desc">
-            "Their creative team has a sharp eye for detail and a deep understanding of consumer preferences, making
-            them an exceptional design partner."
-          </p>
-          <p class="cf-text-author">Craft Buyer, Michaels</p>
-        </div>
+        <p class="cf-text-desc">
+          "Their creative team has a sharp eye for detail and a deep understanding of consumer preferences, making them
+          an exceptional design partner."
+        </p>
         <div class="cf-rings">
           <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/Star.png?v=1750352297" alt="">
         </div>
       </div>
       <div class="cf-item">
-        <div class="cf-img">
-          <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/logo_3.png?v=1750352297" alt="">
-        </div>
-        <div class="cf-text">
-          <p class="cf-text-desc">
-            "From product quality to category integration, QY Crafts checks all the boxes. Their ability to streamline
-            assortments, maintain consistency, and offer strong overall service has made them a reliable partner for our
-            craft programs."
-          </p>
-          <p class="cf-text-author">Sourcing Manager, Dollar General</p>
-        </div>
+        <p class="cf-text-desc">
+          "From product quality to category integration, QY Crafts checks all the boxes. Their ability to streamline
+          assortments, maintain consistency, and offer strong overall service has made them a reliable partner for our
+          craft programs."
+        </p>
         <div class="cf-rings">
           <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/Star.png?v=1750352297" alt="">
         </div>

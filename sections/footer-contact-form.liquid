@@ -87,19 +87,35 @@
     background-color: #fff;
     border: 2px solid #70c6ef;
   }
+  .form-succescc-info,
+  .form-fail-info {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .form-succescc-info img,
+  .form-fail-info img {
+    max-height: 20px;
+    width: auto;
+  }
   .fcf-form-form .form-success {
-    color: #fff;
+    color: #0bea0b;
     font-size: 20px;
-    line-height: 34px;
+    line-height: 1;
+    padding: 0;
+    margin: 0 0 0 6px;
     text-align: center;
+    border: none;
+    box-shadow: none;
   }
   .fcf-form-form .form-fail {
-    max-width: 545px;
     word-wrap: break-word;
-    color: #f8cc56;
+    color: #ed0505;
     font-size: 20px;
-    line-height: 34px;
-    text-align: center;
+    line-height: 1;
+    text-align: left;
   }
   .fcf-bg {
     display: flex;
@@ -157,11 +173,15 @@
           <div class="fcf-form-form">
             {% form 'contact' %}
               {%- if form.posted_successfully? -%}
-                <h2 class="form-success form-status form-status-list form__message" tabindex="-1" autofocus>
-                  Submit Successfully
-                </h2>
+                <div class="form-succescc-info">
+                  <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/success.png" alt="">
+                  <h2 class="form-success form-status form-status-list form__message" tabindex="-1" autofocus>
+                    Submit Successfully
+                  </h2>
+                </div>
               {%- elsif form.errors -%}
-                <div class="form__message">
+                <div class="form__message form-fail-info">
+                  <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/fail.png" alt="">
                   <h2 class="form-fail form-status caption-large text-body" role="alert" tabindex="-1" autofocus>
                     Submission failed, please check the information you filled in
                   </h2>
@@ -175,6 +195,31 @@
                   </li>
                 </ul>
               {%- endif -%}
+
+              {% if template.name == 'product' %}
+                <div class="product-title form-item">
+                  <label for="product-title">Product Title</label>
+                  <input
+                    type="text"
+                    name="contact[Product_title]"
+                    id="product-title"
+                    value="Product Title: {{ product.title }}"
+                    required
+                    readonly
+                  >
+                </div>
+                <div class="product-sku form-item">
+                  <label for="product-sku">Product SKU</label>
+                  <input
+                    type="text"
+                    name="contact[product_sku]"
+                    id="product-sku"
+                    value="Product SKU: {{ product.selected_or_first_available_variant.sku }}"
+                    required
+                    readonly
+                  >
+                </div>
+              {% endif %}
 
               <div class="first-name form-item">
                 <label for="first-name">First name</label>

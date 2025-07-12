@@ -1,12 +1,12 @@
 .product__page {
     grid-template-columns: minmax(0, 748px) 50px minmax(0, 642px);
+    align-items: flex-start;
 }
 
 .product__images {
-    max-height: 840px;
     grid-column: 1;
     background-color: #CFF0FD;
-    padding: 130px 56px 50px;
+    padding: 50px;
     overflow: hidden;
     border-radius: 16px;
     -webkit-border-radius: 16px;
@@ -22,12 +22,12 @@
 
 .product__images--thumbs .product__slide {
     width: 100%;
-    max-width: 274px;
     margin: 0 auto;
 }
 
 .product__thumbs {
-    margin-top: 100px;
+    margin-top: 50px;
+    margin-bottom: 0;
 }
 
 .product__title {

@@ -62,7 +62,7 @@
     border: none;
     outline: none;
     border-radius: 10px;
-    margin-bottom: 24px;
+    margin-bottom: 10px;
     font-size: 14px;
     padding: 16px;
   }
@@ -204,17 +204,6 @@
                     name="contact[Product_title]"
                     id="product-title"
                     value="Product Title: {{ product.title }}"
-                    required
-                    readonly
-                  >
-                </div>
-                <div class="product-sku form-item">
-                  <label for="product-sku">Product SKU</label>
-                  <input
-                    type="text"
-                    name="contact[product_sku]"
-                    id="product-sku"
-                    value="Product SKU: {{ product.selected_or_first_available_variant.sku }}"
                     required
                     readonly
                   >

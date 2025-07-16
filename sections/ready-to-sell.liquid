@@ -128,60 +128,26 @@
       </p>
       <div class="rts-collection-box">
         <div class="rts-collection-content">
-          <div class="rts-item">
-            <a href="https://www.qycrafts.com/collections/cozy-craftworks" class="rts-item-url">
-              <div class="collection-img">
-                <img
-                  class="rts-item-img"
-                  src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/34.jpg?v=1751879696"
-                  alt=""
-                >
-                <div class="rts-overlay">
-                  <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/arrow.png?v=1750410926" alt="">
+          {% for item in section.blocks %}
+            <div class="rts-item">
+              <a href="{{ item.settings.coll_item_url }}" class="rts-item-url">
+                <div class="collection-img">
+                  <img
+                    class="rts-item-img"
+                    src="{{ item.settings.coll_item_img | image_url: width: master }}"
+                    alt=""
+                  >
+                  <div class="rts-overlay">
+                    <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/arrow.png?v=1750410926" alt="">
+                  </div>
                 </div>
-              </div>
-              <div class="collection-text">
-                <p class="collection-title">Tooblerz<sup>TM</sup></p>
-                <p class="collection-desc">Fuzzy Construction Play Sets</p>
-              </div>
-            </a>
-          </div>
-          <div class="rts-item">
-            <a href="https://www.qycrafts.com/collections/craft-spot" class="rts-item-url">
-              <div class="collection-img">
-                <img
-                  class="rts-item-img"
-                  src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/43.jpg?v=1751878473"
-                  alt=""
-                >
-                <div class="rts-overlay">
-                  <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/arrow.png?v=1750410926" alt="">
+                <div class="collection-text">
+                  <p class="collection-title">{{ item.settings.coll_item_title }}</p>
+                  <p class="collection-desc">{{ item.settings.coll_item_subtitle }}</p>
                 </div>
-              </div>
-              <div class="collection-text">
-                <p class="collection-title">Craft Spot<sup>TM</sup></p>
-                <p class="collection-desc">Family-bonding crafts creating shareable memories</p>
-              </div>
-            </a>
-          </div>
-          <div class="rts-item">
-            <a href="https://www.qycrafts.com/collections/cozy-craftworks" class="rts-item-url">
-              <div class="collection-img">
-                <img
-                  class="rts-item-img"
-                  src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/33.jpg?v=1751964567"
-                  alt=""
-                >
-                <div class="rts-overlay">
-                  <img src="https://cdn.shopify.com/s/files/1/0710/6176/6321/files/arrow.png?v=1750410926" alt="">
-                </div>
-              </div>
-              <div class="collection-text">
-                <p class="collection-title">Cozy Craftworks<sup>TM</sup></p>
-                <p class="collection-desc">Stress-relieving soft crafts for mindful creativity</p>
-              </div>
-            </a>
-          </div>
+              </a>
+            </div>
+          {% endfor %}
         </div>
       </div>
     </div>
@@ -192,6 +158,34 @@
 {
   "name": "Ready to Sell",
   "settings": [],
+  "blocks": [
+    {
+      "type": "collection_item",
+      "name": "Collection Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "coll_item_img",
+          "label": "封面图片"
+        },
+        {
+          "type": "text",
+          "id": "coll_item_title",
+          "label": "标题"
+        },
+        {
+          "type": "text",
+          "id": "coll_item_subtitle",
+          "label": "副文本"
+        },
+        {
+          "type": "url",
+          "id": "coll_item_url",
+          "label": "URL"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
       "name": "Ready to Sell"
